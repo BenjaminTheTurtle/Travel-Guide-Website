@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Travel Guide Website </title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+    <style>
+      nav{
+        background: url("https://i.pinimg.com/1200x/c8/6a/b3/c86ab320eb7dd9bb4c052463d3642166.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #travel{
+        background: url("https://i.pinimg.com/736x/4d/99/63/4d996309561f99791b2a644f01cf97a9.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      
+      .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+      }
+
+
+      .pagination a.active {
+        background-color: rgb(212, 160, 222);
+        color: white;
+      }
+
+
+      .pagination a:hover:not(.active) {background-color: #d295dc;}
+
+      .pagination a{
+        border: 1px solid rgb(172, 113, 179);
+        background-color: rgb(255, 251, 255);
+      }
+
+      .card{transition: transform 0.2s ease, background-color 0.2s ease;}
+
+      .card:hover{
+        transform: scale(1.05);
+      }
+
+      
+
+
+
+    </style>
+
+</head>
+<body style="background-color: rgb(246, 233, 246);">
+<nav id="navbar" class="navbar navbar-expand-lg" style="background-color: rgb(206, 130, 206);">
+    <div class="container">
+        <a class="navbar-brand" href="About_Us.html"> <img src="../Books/Image/Logo.png" alt="Logo-WE'ER" height="50px" width="110px"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span> </button>
+            
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="../Index.html"> Home</a>
+            </li>
+            
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="" role="button" data-bs-toggle="dropdown"> Places to Visit </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="Projects-Websites/Taunggyi.html"> Taunggyi </a></li>
+                    <li><a class="dropdown-item" href="Projects-Websites/Kalaw.html"> Kalaw </a></li>
+                    <li><a class="dropdown-item" href="Projects-Websites/Nyaungshwe.html"> Nyaungshwe </a></li>
+                    <li><a class="dropdown-item" href="Projects-Websites/Pindaya.html"> Pindaya </a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Projects-Websites/Cuisines.html"> Cuisines </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Projects-Websites/Culture.html"> Culture & Traditions  </a>
+            </li>
+        </ul>
+
+        <form class="d-flex me-3">
+            <input class="form-control me-2" type="search" placeholder="Type here to Search">
+                <button class="btn btn-outline-light" type="button"> Search</button>
+        </form>
+        <div class="ms-auto">
+          <button type="button" class="btn btn-light ms-3" data-bs-toggle="modal" data-bs-target="#myModal"> Sign Up </button>
+          <button type="button" class="btn btn-light ms-3" data-bs-toggle="modal" data-bs-target="#myModal1"> Log in </button>
+          <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg" class="rounded-circle ms-4" data-bs-toggle="modal" data-bs-target="#Account" height="50px" width="50px"> </a>
+        </div>
+      </div>
+</div>
+
+<div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-md modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Sign Up </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label"> Username </label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Email Address </label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+
+                        <div >
+                            <label for="password" class="form-label"> Password </label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="pt-2">
+                        <input type="checkbox" id="agree1">
+                        <label for="agree1"> I agree to the <a href="Terms_Agreements.html"> Terms and Agreements </a></label><br>
+                        <input type="checkbox" id="agree2">
+                        <label for="agree2"> I agree to the <a href="Privacy_Policy.html">Privacy Policy </a></label><br>
+                        <p class="text-end pt-5" style="font-size: 15px;">Already have an account? <a href="myModal1" data-bs-toggle="modal" data-bs-target="#myModal1" data-bs-dismiss="modal"> Log in </a></p>
+                        </div>
+
+                    </form>
+                </div>
+ 
+                <div class="modal-footer justify-content-center p-4">
+                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal" style="background-color: rgb(226, 158, 226);"> Confirm </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog modal-md modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Login </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Email Address </label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+
+                        <div >
+                            <label for="password" class="form-label"> Password </label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="pt-2">
+                        <input type="checkbox" id="agree1">
+                        <label for="agree1"> I agree to the <a href="Terms_Agreements.html"> Terms and Agreements </a></label><br>
+                        <input type="checkbox" id="agree2">
+                        <label for="agree2"> I agree to the <a href="Privacy_Policy.html">Privacy Policy </a></label><br>
+                        <p class="text-end pt-5" style="font-size: 15px;"> <a href="$"> Forgot Password? </a></p>
+                        </div>
+
+                    </form>
+                </div>
+ 
+                <div class="modal-footer justify-content-center p-4">
+                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal" style="background-color: rgb(226, 158, 226);"> Confirm </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"> </button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"> </button>
+            
+
+        </div>
+
+      
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/1200x/a3/39/5a/a3395a09c58eb99a53be06fc5ca96bcd.jpg" class="d-block" style="width: 100%;" height="665px">
+                <div class="carousel-caption">
+                    <h3> Taunggyi </h3>
+                    <p> The City of Mountains </p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/2a/c9/e4/2ac9e41d190f89394b72b30648ec80e5.jpg" class="d-block" style="width: 100%;" height="665px">
+                <div class="carousel-caption">
+                    <h3> Kalaw </h3>
+                    <p> The Little England of Myanmar </p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/1200x/3f/eb/04/3feb04d37c7737d1f4c5fc164182924f.jpg" class="d-block" style="width: 100%;" height="665px">
+                <div class="carousel-caption ">
+                    <h3> Nyaungshwe </h3>
+                    <p> The Gateway to Inle</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/72/7d/21/727d2168240ebea370644b90529b9cdd.jpg" class="d-block" style="width: 100%;" height="665px">
+                <div class="carousel-caption ">
+                    <h3> Pindaya </h3>
+                    <p> The Land of Cave Dwellers </p>
+                </div>
+            </div>
+
+             <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"> </span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"> </span>
+    </button>
+          
+
+        </div>
+</div>
+
+
+  <div class="container py-5">
+  <div class="row align-items-center">
+
+    <div class="col-md-6">
+      <img src="https://i.pinimg.com/1200x/f0/82/1a/f0821ae85df0baf1480fe3e60119e10c.jpg" class="img-fluid rounded" style="height: auto; width: auto;">
+    </div>
+
+    <div class="col-md-6">
+      <h3> Visiting Shan State, Myanmar </h3>
+      <p> 
+        If you’re looking for a peaceful and beautiful place to explore, Shan State is the perfect choice. Surrounded by mountains and pagodas, it offers a relaxing escape from busy city life. Travelers can visit tourist attractions that range from quiet villages to enormous lakes while enjoying the cold, breezy air of Shan, especially during sunrise and sunset. With its natural beauty, friendly locals, and calm atmosphere, Shan State is a wonderful destination for anyone who wants to slow down and enjoy the journey.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <h3> All about Shan State </h3>
+      <p>
+       Surrounded in the eastern highlands of Shan State, this region offers a blend of natural beauty, cultural heritage, and scenic landscapes. Visitors are drawn to its peculiar hills, traditional villages, and iconic landmarks like the Shwe Bone Pwint Pagoda, where it offers panoramic views of the entire city. Whether you’re exploring bustling local markets or enjoying a quiet sunrise over the mountains, Shan State delivers a peaceful yet enriching travel experience.
+      </p>
+    </div>
+
+    <div class="col-md-6">
+      <img src="https://i.pinimg.com/736x/42/b6/b9/42b6b9663521e3b909f605f000ee18d5.jpg" class="img-fluid rounded w-100" style="height: auto; width: auto;">
+    </div>
+
+  </div>
+</div>
+
+<section style="background-color: #f7def9;" class="pb-5">
+  <h2 class="text-center py-4"> Practical Information for Travel </h2>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://i.pinimg.com/1200x/06/4c/f5/064cf5137903b249b937befa3af5201f.jpg" class="card-img-top" height="300px">
+        <div class="card-body text-center">
+          <h4 class="card-title text-center"> Entry & Safety </h4>
+          <p> Traveling in Shan State requires some awareness of local conditions. While popular destinations such as Inle Lake and Kalaw are generally safe and accessible, certain parts of northern and eastern Shan State may be restricted due to ongoing conflicts. Travelers should check current advisories before visiting remote areas and always carry a passport, as checkpoints are common throughout the region. </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://i.pinimg.com/1200x/09/b7/5a/09b75ad52920845a9081fb61de265aee.jpg" class="card-img-top" height="300px">
+        <div class="card-body text-center">
+          <h4 class="card-title text-center"> Transportation </h4>
+          <p> Getting around Shan State can be an adventure in itself. Most travelers arrive via Heho Airport, which serves as the gateway to Inle Lake. Buses connect major towns and are an affordable option, though journeys can be long and sometimes uncomfortable. Trains offer scenic views of the countryside but are slow, while hiring a private car provides greater flexibility, especially when exploring rural or less accessible areas. </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://i.pinimg.com/736x/ff/5e/8e/ff5e8e5490fda81f9e6d2671c7fdadc1.jpg" class="card-img-top" height="300px">
+        <div class="card-body text-center">
+          <h4 class="card-title text-center"> Climate </h4>
+          <p> Shan State enjoys a cooler climate compared to much of Myanmar due to its higher elevation. The best time to visit is during the cool, dry season from November to February, when temperatures are pleasant and skies are clear. The hot season from March to May can be quite warm, while the rainy season from June to October brings lush landscapes but may disrupt travel plans due to poor road conditions. </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row pt-5 justify-content-center">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://i.pinimg.com/1200x/cf/35/e8/cf35e80fbc64048c74c3cb1cfeaad97f.jpg" class="card-img-top" height="300px">
+        <div class="card-body text-center">
+          <h4 class="card-title text-center"> Money </h4>
+          <p> Cash remains the primary form of payment across Shan State, particularly outside major tourist hubs. ATMs are available in larger towns, but access can be limited in rural areas, so it is advisable to carry sufficient local currency. Mobile coverage is generally available in towns, but internet connectivity may be slow or unreliable, especially in remote regions, so travelers should plan accordingly. </p>
+      </div>
+    </div>
+</div>
+
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://i.pinimg.com/1200x/f4/db/50/f4db508e41f20564fdc3d61a8a2242ad.jpg" class="card-img-top" height="300px">
+        <div class="card-body text-center">
+          <h4 class="card-title text-center"> Cultural Respect </h4>
+          <p> Shan State is home to a rich mix of ethnic groups, each with its own traditions and way of life. Visitors can experience vibrant local markets, unique cuisine such as Shan noodles, and traditional village life. Respect for local customs is important such as dressing modestly, removing shoes before entering religious sites, and asking permission before taking photographs. Engaging with local communities respectfully can greatly enrich the travel experience. </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+
+
+
+</section>
+
+
+ 
+   
+
+    <section class="py-5 container-fluid" id="travel" style="background-color:rgb(202, 170, 201);">
+    <h2 class="text-center mb-4"> Travel Now! </h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/03/fb/32/03fb324e4369a63b0b4b330839f37155.jpg" class="card-img-top" height="300px" >
+          <div class="card-body text-center">
+            <h5 class="card-title text-center"> Inle Lake, Nyaungshwe </h5>
+            <button style="text-decoration: underline; border: none; background-color: white;" > <a href="Projects-Websites/Nyaungshwe.html" style="text-decoration: underline; border: none; background-color: white; color: gray;">Learn More </a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <img src="https://i.pinimg.com/1200x/3f/d4/a8/3fd4a8dcaccdb160691dc7c0951ca660.jpg" class="card-img-top"  height="300px">
+          <div class="card-body">
+            <h5 class="card-title text-center"> Phaung Daw Oo, Nyaungshwe </h5>
+            <button style="text-decoration: underline; border: none; background-color: white;" > <a href="Projects-Websites/Nyaungshwe.html" style="text-decoration: underline; border: none; background-color: white; color: gray;">Learn More </a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <img src="https://i.pinimg.com/1200x/5b/79/30/5b79307ef3fae3a64333fd4288611b7b.jpg" class="card-img-top"  height="300px">
+          <div class="card-body">
+            <h5 class="card-title text-center"> Pindaya Cave, Pindaya </h5>
+            <button style="text-decoration: underline; border: none; background-color: white;" > <a href="Projects-Websites/Pindaya.html" style="text-decoration: underline; border: none; background-color: white; color: gray;">Learn More </a></button>
+          </div>
+        </div>
+      </div>
+
+  </div>
+  </section>
+
+  <section style="background-color: #f0d8f5;" class="p-5">
+    <div class="container my-5">
+  <h2 class="text-center mb-4"> Getting to know Shan State </h2>
+ 
+  <div class="accordion" id="travelAccordion">
+ 
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+          Where is Shan State located?
+        </button>
+      </h2>
+      <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#travelAccordion">
+        <div class="accordion-body">
+          Shan State is the largest state of Myanmar. It covers over 1/4th of Myanmar and is located in the eastern part, bordering neighbouring countries such as China, Laos, and Thailand.
+        </div>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+          What should I wear when visiting Shan State?
+        </button>
+      </h2>
+      <div id="q2" class="accordion-collapse collapse" data-bs-parent="#travelAccordion">
+        <div class="accordion-body">
+          When visiting Shan State, make sure to wear thick clothes that can cover your body as Shan State is usually quite chilly. Additionally, make sure to bring sunscreen and comfortable footwear since Shan is very sunny despite its cold weather.
+        </div>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+            What are some must-see places in Shan State?
+        </button>
+      </h2>
+      <div id="q3" class="accordion-collapse collapse" data-bs-parent="#travelAccordion">
+        <div class="accordion-body">
+          Some must-see places include the Inle Lake which is known for its panoramic views of the hilly terrain, Shwe Ka Bon Pagoda, and the Pindaya Caves. 
+        </div>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
+          What are the cities of Shan State?
+        </button>
+      </h2>
+      <div id="q4" class="accordion-collapse collapse" data-bs-parent="#travelAccordion">
+        <div class="accordion-body">
+          There are three major cities in Shan State, Taunggyi, Kengtung, and Lashio. Amongst them, there are also popular travel destinations in the towns of those cities such as Kalaw or Pindaya.
+        </div>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">
+          Should I know any travel information about Shan State?
+        </button>
+      </h2>
+      <div id="q5" class="accordion-collapse collapse" data-bs-parent="#travelAccordion">
+        <div class="accordion-body">
+          There are some key travel destinations in Shan State such as the Inle Lake, and the Shwe Ka Bon Pagoda as well as festivals such as the hot air balloon Festival. Additionally, ATMs are limited outside of major towns. Therefore, it's best to bring tons of cash with you. Some roads are rough, so expect slow travel.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+  <div class="container py-4">
+    <h2 class="py-3 text-center"> Must Try Things in Shan State </h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div id="Food" class="carousel slide" data-bs-ride="carousel">
+
+          
+ 
+        <div class="carousel-inner rounded" >
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/1200x/19/99/d2/1999d2786f8f0f0b9f8e4cdcae61a108.jpg" class="d-block" style="height: 600px; width: 100%;" >
+                <div class="carousel-caption">
+                    <h3> Shan Noodles </h3>
+                     <p> A famous local dish made with rice noodles, usually served with chicken or pork and a light, tasty sauce. </p>
+                     <button type="btn" class="btn btn-lg btn-dark w-75"> <a href="Projects-Websites/Cuisines.html" style="text-decoration: none; border: none; color: white;"> Eat Now </a> </button>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/1200x/61/20/89/612089078e5410cc01b899423d8f4f58.jpg" class="d-block" style="height: 600px; width: 100%;">
+                <div class="carousel-caption">
+                    <h3> Tofu Nway </h3>
+                    <p> A warm and soft tofu dish made from chickpeas. It has a smooth texture and is often eaten with rice noodles or by itself as a comfort food. </p>
+                    <button type="btn" class="btn btn-lg btn-dark w-75"> <a href="Projects-Websites/Cuisines.html" style="text-decoration: none; border: none; color: white;"> Eat Now </a> </button>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/1200x/41/b9/a7/41b9a7697b9e1f22b613824ab7e27684.jpg" class="d-block" style="height: 600px; width: 100%;" >
+                <div class="carousel-caption ">
+                    <h3> Shan Sticky Rice </h3>
+                    <p> Rice cooked with turmeric and served with chicken, fish, or pork. It comes with a side of fresh vegetables and a light soup.</p>
+                    <button type="btn" class="btn btn-lg btn-dark w-75"> <a href="Projects-Websites/Cuisines.html" style="text-decoration: none; border: none; color: white;"> Eat Now </a> </button>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/1200x/b1/fe/a0/b1fea003d9ddcbbd9bb4ee3f81dd3562.jpg" class="d-block" style="height: 600px; width: 100%;">
+                <div class="carousel-caption ">
+                    <h3> Meat Skewers </h3>
+                    <p> Meat or vegetables grilled on sticks, often sold in local markets. They are smoky, juicy, and perfect for a quick snack.</p>
+                    <button type="btn" class="btn btn-lg btn-dark w-75"> <a href="Projects-Websites/Cuisines.html" style="text-decoration: none; border: none; color: white;"> Eat Now </a> </button>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/1200x/9a/b9/99/9ab9999f7ca63dd92f6f8199921012a0.jpg" class="d-block"  style="height: 600px; width: 100%;">
+                <div class="carousel-caption ">
+                    <h3> Pickled Tea Leaf Salad </h3>
+                    <p> A popular dish across Myanmar with unique mix of sour, bitter, and salty flavors. Try the Shan Version too!</p>
+                    <button type="btn" class="btn btn-lg btn-dark w-75"> <a href="Projects-Websites/Cuisines.html" style="text-decoration: none; border: none; color: white;"> Eat Now </a> </button>
+                </div>
+            </div>
+
+             <button class="carousel-control-prev" type="button" data-bs-target="#Food" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"> </span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#Food" data-bs-slide="next">
+        <span class="carousel-control-next-icon"> </span>
+    </button>
+          
+
+        </div>
+</div>
+        
+                
+      </div>
+
+      <div class="col-md-6">
+        <div id="activity" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner rounded" >
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/1200x/59/b7/42/59b742305c9f9ef75510be17c7c22500.jpg" class="d-block" style="height: 600px; width: 100%;" >
+                <div class="carousel-caption">
+                    <h3> Take Panoramic Pictures </h3>
+                     <p> Take a snap of yourself with the beauty of Shan's luscious greenery and hills. </p>
+                     <button type="btn" class="btn btn-lg btn-dark w-75"> <a href="Projects-Websites/Taunggyi.html" style="text-decoration: none; border: none; color: white;"> Learn More </a> </button>
+                </div>
+            </div>
+ 
+        
+
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/a4/b7/02/a4b70272ef8e6caa5adede7f2e35a332.jpg" class="d-block" style="height: 600px; width: 100%;">
+                <div class="carousel-caption">
+                    <h3> Ride the Inle Boat </h3>
+                    <p> Riding the Inle Boat to the Pagodas surrounded by water is one of the most relaxing things to do there. </p>
+                    <button type="btn" class="btn btn-lg btn-dark w-75"> <a href="Projects-Websites/Taunggyi.html" style="text-decoration: none; border: none; color: white;"> Learn More </a> </button>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/1200x/59/4d/79/594d7922a2cd36f7ca024824977e7e47.jpg" class="d-block" style="height: 600px; width: 100%;" >
+                <div class="carousel-caption ">
+                    <h3> Try the Local Sweet & Sour Strawberries </h3>
+                    <p> Shan State produces an abundance of strawberries, they are a must try for their delectable flavour unlike no other.</p>
+                    <button type="btn" class="btn btn-lg btn-dark w-75"> <a href="Projects-Websites/Taunggyi.html" style="text-decoration: none; border: none; color: white;"> Learn More </a> </button>
+                </div>
+            </div>
+
+          
+
+             <button class="carousel-control-prev" type="button" data-bs-target="#activity" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"> </span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#activity" data-bs-slide="next">
+        <span class="carousel-control-next-icon"> </span>
+    </button>
+          
+
+        </div>
+</div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  </section>
+
+  <section style="background-color: #f2e0f5;">
+    <div class="py-5" id="light">
+  <div class="container">
+    <h2 class="mb-4 text-center">Visitors' Reviews</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+ 
+      <div class="col">
+        <div class="card h-100 shadow-sm p-3">
+          <div class="d-flex align-items-center mb-2">
+            <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg" class="rounded-circle me-2" alt="Lwin Htet" width="40" height="40">
+            <div>
+              <h6 class="mb-0"> Aung Blote </h6>
+              
+            </div>
+          </div>
+          <p class="card-text">"I think I like this state of Myanmar"</p>
+          <div class="d-flex gap-2">
+            <img src="https://i.pinimg.com/1200x/00/ec/a3/00eca3e5f8772817518fab595c0ee38f.jpg" class="img-fluid rounded" style="width:150px; height:150px; object-fit:cover;">
+            <img src="https://i.pinimg.com/736x/49/50/b2/4950b28e119beca342ec22def1b32bd4.jpg" class="img-fluid rounded" style="width:150px; height:150px; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col">
+        <div class="card h-100 shadow-sm p-3">
+          <div class="d-flex align-items-center mb-2">
+            <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg" class="rounded-circle me-2" alt="Soe Wai" width="40" height="40">
+            <div>
+              <h6 class="mb-0"> Myaut Thiri </h6>
+            
+            </div>
+          </div>
+          <p class="card-text">"I LOVE LOVE LOVE the food here, like the Shan Noodles;  idk, I just want to eat."</p>
+        </div>
+      </div>
+ 
+      <!-- Review Card 3 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm p-3">
+          <div class="d-flex align-items-center mb-2">
+            <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg" class="rounded-circle me-2" alt="Hla Hla" width="40" height="40">
+            <div>
+              <h6 class="mb-0"> Hello PSH </h6>
+              <div class="text-warning">
+                
+              </div>
+            </div>
+          </div>
+          <p class="card-text">"I fell down a pagoda, but it was alright."</p>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</div>
+</section>
+
+
+  
+  
+    
+
+
+
+  
+
+
+  <div class="modal fade" id="Account">
+        <div class="modal-dialog modal-lg modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> My Account </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                  <div class="row align-items-center justify-content-center">
+
+                <div class="col-md-4 mb-3 text-center">
+                    <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg"
+                         class="img-fluid rounded-circle mb-2"
+                         alt="Profile Picture">
+                    <br>
+                    <button class="btn btn-outline-dark btn-lg">
+                        Change Image
+                    </button>
+                </div>
+
+                <div class="col-md-6 text-md-start text-center pb-5">
+                    <h4>Name: Bhone Htet Naing </h4>
+                    <p class="mb-0">Email: bhone.h.naing@gmail.com </p>
+                </div>
+
+            </div>
+            <div class="mt-4 text-start rounded p-3" style="background-color: white;">
+                <h5>Bio</h5>
+                <p>
+                    I like turtles and all in between.
+                </p>
+            </div>
+            </div>
+            </div>
+          </div>
+          </div>
+
+
+
+<footer class="bg-dark text-light pt-4 pb-3">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 mb-3 mt-5">
+        <a href="Projects-Websites/Privacy_Policy.html" style="text-decoration: none; color: white;"> <h5>Privacy Policy</h5> </a>
+      </div>
+
+      <div class="col-md-3 mb-3 mt-5">
+        <a href="Projects-Websites/Terms_Agreements.html" style="text-decoration: none; color: white;"><h5>Terms and Agreement</h5> </a>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="Index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="Projects-Websites/Cuisines.html" class="text-light text-decoration-none"> Cuisines </a></li>
+          <li><a href="Projects-Websites/Culture.html" class="text-light text-decoration-none"> Culture & Traditions </a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5> Contact Us </h5>
+        <img src="Projects-Websites/Facebook.png" height="50px" width="50px" alt="Facebook">
+        <img src="Projects-Websites/Twitter.png" height="50px" width="50px" alt="Twitter/X">
+        <img src="Projects-Websites/Viber.png" height="50px" width="50px" alt="Viber">
+    </div>
+
+    <hr class="border-light">
+
+    <div class="text-center">
+      <small>© EDUSN.WE'ER (2026). All Rights Reserved </small>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
