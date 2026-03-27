@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Travel Guide Website </title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+      nav{
+        background: url("https://i.pinimg.com/1200x/c8/6a/b3/c86ab320eb7dd9bb4c052463d3642166.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #travel{
+        background: url("https://i.pinimg.com/736x/4d/99/63/4d996309561f99791b2a644f01cf97a9.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      
+      .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+      }
+
+
+      .pagination a.active {
+        background-color: rgb(212, 160, 222);
+        color: white;
+      }
+
+
+      .pagination a:hover:not(.active) {background-color: #d295dc;}
+
+      .pagination a{
+        border: 1px solid rgb(172, 113, 179);
+        background-color: rgb(255, 251, 255);
+      }
+
+      .card{transition: transform 0.2s ease, background-color 0.2s ease;}
+
+      .card:hover{
+        transform: scale(1.05);
+      }
+
+      
+
+
+
+    </style>
+
+</head>
+<body style="background-color: rgb(246, 233, 246);">
+<nav id="navbar" class="navbar navbar-expand-lg" style="background-color: rgb(206, 130, 206);">
+    <div class="container">
+        <a class="navbar-brand" href="About_Us.html"> <img src="../Books/Image/Logo.png" alt="Logo-WE'ER" height="50px" width="110px"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span> </button>
+            
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="../Index.html"> Home</a>
+            </li>
+            
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="" role="button" data-bs-toggle="dropdown"> Places to Visit </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="Taunggyi.html"> Taunggyi </a></li>
+                    <li><a class="dropdown-item" href="Kalaw.html"> Kalaw </a></li>
+                    <li><a class="dropdown-item" href="Nyaungshwe.html"> Nyaungshwe </a></li>
+                    <li><a class="dropdown-item" href="Pindaya.html"> Pindaya </a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Cuisines.html"> Cuisines </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Culture.html"> Culture & Traditions  </a>
+            </li>
+        </ul>
+
+        <form class="d-flex me-3">
+            <input class="form-control me-2" type="search" placeholder="Type here to Search">
+                <button class="btn btn-outline-light" type="button"> Search</button>
+        </form>
+
+        <div class="ms-auto">
+          <button type="button" class="btn btn-light ms-3" data-bs-toggle="modal" data-bs-target="#myModal"> Sign Up </button>
+          <button type="button" class="btn btn-light ms-3" data-bs-toggle="modal" data-bs-target="#myModal1"> Log in </button>
+          <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg" class="rounded-circle ms-4" data-bs-toggle="modal" data-bs-target="#Account" height="50px" width="50px"> </a>
+        </div>
+</div>
+
+<div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-md modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Sign Up </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label"> Username </label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Email Address </label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+
+                        <div >
+                            <label for="password" class="form-label"> Password </label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="pt-2">
+                        <input type="checkbox" id="agree1">
+                        <label for="agree1"> I agree to the <a href="Terms_Agreements.html"> Terms and Agreements </a></label><br>
+                        <input type="checkbox" id="agree2">
+                        <label for="agree2"> I agree to the <a href="Privacy_Policy.html">Privacy Policy </a></label><br>
+                        <p class="text-end pt-5" style="font-size: 15px;">Already have an account? <a href="myModal1" data-bs-toggle="modal" data-bs-target="#myModal1" data-bs-dismiss="modal"> Log in </a></p>
+                        </div>
+
+                    </form>
+                </div>
+ 
+                <div class="modal-footer justify-content-center p-4">
+                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal" style="background-color: rgb(226, 158, 226);"> Confirm </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog modal-md modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Login </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Email Address </label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+
+                        <div >
+                            <label for="password" class="form-label"> Password </label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="pt-2">
+                        <input type="checkbox" id="agree1">
+                        <label for="agree1"> I agree to the <a href="Terms_Agreements.html"> Terms and Agreements </a></label><br>
+                        <input type="checkbox" id="agree2">
+                        <label for="agree2"> I agree to the <a href="Privacy_Policy.html">Privacy Policy </a></label><br>
+                        <p class="text-end pt-5" style="font-size: 15px;"> <a href="$"> Forgot Password? </a></p>
+                        </div>
+
+                    </form>
+                </div>
+ 
+                <div class="modal-footer justify-content-center p-4">
+                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal" style="background-color: rgb(226, 158, 226);"> Confirm </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class=" text-white text-center d-flex align-items-center" style="height: 300px; background-color: rgb(130, 73, 134);">
+  <div class="container">
+    
+    <h1 class="display-4 fw-bold">Welcome to Nyaungshwe!</h1>
+    
+    <p class="fw-semibold mt-3">
+      Nyaungshwe is a small, bustling town located at the northern tip of Inle Lake. Serving as the main gateway to the lake, Nyaungshwe blends traditional Shan culture with a growing tourism scene.
+    </p>
+    
+    <p class="mt-3">
+      The town itself has a relaxed, small-town charm with markets, restaurants, and canals that reflect its connection to the lake. Visitors often use it as a base for exploring the lake, surrounding villages, and nearby attractions, making it a convenient and culturally immersive stop in Shan State.
+    </p>
+    
+    
+  </div>
+</section>
+
+<div class="container py-5 text-center"> <h1 class="fw-bold pb-3"> Topics </h1> 
+
+    <div class="mb-4">
+      <a href="#locations" class="btn btn-dark me-2">
+        Locations
+      </a>
+
+      <a href="#activities" class="btn btn-outline-dark me-2">
+        Activities
+      </a>
+
+      <a href="#accommodation" class="btn btn-outline-dark me-2">
+        Accommodation
+      </a>
+
+      <a href="#traveladvice" class="btn btn-outline-dark">
+        Travel Advice
+      </a>
+    </div>
+
+<div class="container py-5">
+  <div class="row align-items-center">
+
+    <div class="col-md-6">
+      <img src="https://i.pinimg.com/1200x/3d/06/3b/3d063bfb49986fb64270d0003bde07d9.jpg" class="img-fluid rounded" height="400px">
+    </div>
+
+    <div class="col-md-6" id="locations">
+      <h2> Inle Lake  </h2>
+      <p>
+        Nyaungshwe is one of the main areas to get into the Inle Lake where you can ride the calming currents while feeding the birds and fishes that you pass-by as well as by from boat vendors that sell accessories and souvenirs.
+      </p>
+
+      <div class="container mt-3 text-center">
+        <h2 class="pb-3"> Experience Rating </h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="text-start"> <strong> Enjoyment </strong></h5>
+                 <div class="progress" style="height: 25px;"> 
+                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated " style="width: 90%;"> 90% </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-start"> <strong> Environment </strong></h5>
+                 <div class="progress" style="height: 25px;"> 
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated " style="width: 75%;"> 75% </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-start"> <strong> Convenience </strong></h5>
+                 <div class="progress" style="height: 25px;"> 
+                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated " style="width: 75%;"> 75% </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="text-center pt-5"> "I almost fell off the boat once, thank goodness I actually didn't"</h5>
+
+      
+       
+       
+    </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2> Shwe Yan Pyan Monastery  </h2>
+      <p>
+       A historic wooden monastery dating back to 1803, famous for intricate carvings and traditional architecture. </p>
+      <div class="container mt-3 text-center">
+        <h2 class="pb-3"> Experience Rating </h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="text-start"> <strong> Enjoyment </strong></h5>
+                 <div class="progress" style="height: 25px;"> 
+                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated " style="width: 80%;"> 80% </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-start"> <strong> Environment </strong></h5>
+                 <div class="progress" style="height: 25px;"> 
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated " style="width: 75%;"> 75% </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-start"> <strong> Convenience </strong></h5>
+                 <div class="progress" style="height: 25px;"> 
+                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated " style="width: 95%;"> 95% </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="text-center pt-5"> "I absolutely adore the exterior and interior design."</h5>
+
+      
+       
+       
+    </div>
+    </div>
+
+    <div class="col-md-6">
+      <img src="https://i.pinimg.com/1200x/7b/5f/84/7b5f84867c0dcaafc6ba1e5652f148b4.jpg" class="img-fluid rounded w-100" height="400px">
+    </div>
+
+  </div>
+
+  
+</div>
+
+<div class="container py-5">
+  <div class="row align-items-center">
+
+    <div class="col-md-6">
+      <img src="https://i.pinimg.com/1200x/60/c2/84/60c28444146887241d4c3bf9c319e3f9.jpg" class="img-fluid rounded w-100">
+    </div>
+
+    <div class="col-md-6">
+      <h2> Red Mountain Estate Vineyard  </h2>
+      <p>
+        A short drive outside town, this winery combines scenic views with wine tasting and a relaxed atmosphere.
+      </p>
+      <div class="container mt-3 text-center">
+        <h2 class="pb-3"> Experience Rating </h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="text-start"> <strong> Enjoyment </strong></h5>
+                 <div class="progress" style="height: 25px;"> 
+                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated " style="width: 100%;"> 100% </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-start"> <strong> Environment </strong></h5>
+                 <div class="progress" style="height: 25px;"> 
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated " style="width: 75%;"> 75% </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-start"> <strong> Convenience </strong></h5>
+                 <div class="progress" style="height: 25px;"> 
+                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated " style="width: 85%;"> 85% </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="text-center pt-5"> "The winds here are so breezy, I almost fell asleep in the cabbage patch."</h5>
+
+    </div>
+
+  </div>
+</div>
+
+
+</div>
+</div>
+
+<section class="py-5" id="activities" style="background-color: #ecdcef;">
+  <h2 class="text-center pb-5"> Activities to Do </h2>
+    <div class="container">
+        <div class="row justify-content-center align-items-center align-items-stretch">
+
+            <div class="col-md-5">
+                <div class="card h-100 text-center">
+                    <img src="https://i.pinimg.com/1200x/9b/ab/ac/9babac52a3731c466fb88b7187880693.jpg" height="350px" class="rounded">
+                    <div class="card-body">
+                    <h4> Boat Tours    </h4>
+                    <p> Explore floating gardens, stilt-house villages, and local markets along the lake. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="card h-100 text-center">
+                    <img src="https://i.pinimg.com/1200x/43/2d/73/432d737ddf4f169a1ca72e33ca95d1df.jpg" height="350px" class="rounded">
+                    <div class="card-body">
+                    <h4> Sunset & Photography Spots </h4>
+                    <p> The canals, lake edges, and small hills around town are perfect for capturing Inle Lake’s beauty at sunset. </p>
+                    
+                </div>
+                </div>
+            </div>
+
+            
+
+            
+            </div>
+            </div>
+            
+
+        
+   
+    
+</section>
+
+<section>
+<div class="container py-5">
+
+  <h2 class="text-center mb-4" id="accommodation"> Accommodations </h2>
+
+  <div class="row g-4 pt-3">
+
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <img src="https://pix8.agoda.net/hotelImages/564997/0/da60dfd81850ef067b8361faf10b32f4.jpeg?ce=0&s=450x450" class="card-img-top">
+        <div class="card-body">
+          <h5> Aye Thar Yar Golf Resort</h5>
+          <p> ★★★☆☆ (22) </p>
+          <button type="btn" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#hotel" > More </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <img src="https://pix8.agoda.net/hotelImages/2803948/-1/1842085b7910878dbda5c16e4defc04b.jpg?ca=9&ce=1&s=450x450" class="card-img-top">
+        <div class="card-body">
+          <h5> Mountain Star Hotel </h5>
+          <p> ★★★★☆ (17) </p>
+          <button type="btn" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#hotel" > More </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <img src="https://pix8.agoda.net/hotelImages/126/1265117/1265117_16070517390044428213.jpg?ca=6&ce=1&s=1024x" class="card-img-top">
+        <div class="card-body">
+          <h5> UCT Taunggyi Hotel</h5>
+          <p> ★★★☆☆ (21)</p>
+          <button type="btn" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#hotel" > More </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4 pt-5">
+
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <img src="https://pix8.agoda.net/hotelImages/110/1109996/1109996_17012314480050488155.jpg?ca=6&ce=1&s=450x450" class="card-img-top">
+        <div class="card-body">
+          <h5> Royal Taunggyi Hotel </h5>
+          <p> ★★★☆☆ (31)</p>
+          <button type="btn" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#hotel" > More </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <img src="https://pix8.agoda.net/hotelImages/1061026/-1/22f9c2309978c7e83332e5e42ac72d5b.jpg?ca=0&ce=1&s=450x450" class="card-img-top">
+        <div class="card-body">
+          <h5> Aythaya Monte diVino Lodge </h5>
+          <p> ★★★☆☆ (21)</p>
+          <button type="btn" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#hotel" > More </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <img src="https://pix8.agoda.net/hotelImages/495/4959693/4959693_18053115100065961879.jpg?ca=0&ce=1&s=450x450" class="card-img-top" style="height: 270px;">
+        <div class="card-body">
+          <h5> Hotel Grace </h5>
+          <p> ★★★☆☆ (9)</p>
+          <button type="btn" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#hotel" > More </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container my-4 text-center">
+        <p>
+            <a class="btn btn-dark mt-5 w-50" role="button" data-bs-toggle="collapse" href="#multicollapse1" aria-expanded="true" aria-controls="multicollapse1"> Show More</a>
+        </p>
+            <div class="col">
+                <div class="collapse multicollapse" id="multicollapse1">
+                    <div class="card card-body" style="background-color: #ecdcef; border: none;">
+                        <div class="row g-4 pt-5">
+
+                        <div class="col-md-4">
+                          <div class="card text-center h-100">
+                            <img src="https://ak-d.tripcdn.com/images/22080r000000gxh6k7093_R_600_400_R5_Q70_D.jpg" class="card-img-top">
+                            <div class="card-body">
+                              <h5> Taunggyi Hotel </h5>
+                              <p> ★★★★☆ (42)</p>
+                              <button type="btn" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#hotel" > More </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4">
+                          <div class="card text-center h-100">
+                            <img src="https://pix10.agoda.net/hotelImages/115/1159888/1159888_19111612240084021460.jpg?ca=9&ce=1&s=1024x768" class="card-img-top">
+                            <div class="card-body">
+                              <h5> Cherry Queen Hotel </h5>
+                              <p> ★★★☆☆ (22)</p>
+                              <button type="btn" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#hotel" > More </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4">
+                          <div class="card text-center h-100">
+                            <img src="https://i.travelapi.com/lodging/31000000/30060000/30054000/30053912/b181abc9_z.jpg" class="card-img-top" style="height: 270px;">
+                            <div class="card-body">
+                              <h5> Hotel Htein Thar Taunggyi </h5>
+                              <p> ★★★☆☆ (18)</p>
+                              <button type="btn" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#hotel" > More </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+</section>
+
+<div class="modal fade" id="hotel">
+        <div class="modal-dialog modal-lg modal-dialogue-centered text-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Aye Thar Yar Golf Resort</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                  <img src="https://pix8.agoda.net/hotelImages/564997/0/da60dfd81850ef067b8361faf10b32f4.jpeg?ce=0&s=450x450" class="card-img-top">
+                  <div class="row py-4">
+                    <div class="col-md-4"> 
+                      <img src="https://i.pinimg.com/736x/f4/48/e8/f448e879fc0540b3a33067b4d8de494c.jpg" height="50px" width="50px">
+                      <h6> Taunggyi, Shan </h6></div>
+                    <div class="col-md-4"> 
+                      <img src="https://i.pinimg.com/736x/ed/93/ce/ed93ce20de3af82e73a638939c5129af.jpg" height="50px" width="50px">
+                      <h6> ★★★☆☆ 3/5 Stars </h6> </div>
+                    <div class="col-md-4"> 
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" height="50px" width="50px">
+                      <h6> 22 Reviews </h6> </div>
+                  </div>
+                <p> Welcome to Aye Thar Yar Golf Resort Shan State, your Taunggyi “home away from home.” Aye Thar Yar Golf Resort Shan State aims to make your visit as relaxing and enjoyable as possible, which is why so many guests continue to come back year after year. Guest rooms offer amenities such as air conditioning, a minibar, … </p>
+                <h5 class="pt-1"> Contact </h5>
+                <p> +95 9 666 689345 </p>
+                
+                
+                
+                <h5 class="pt-3 text-start"> Details </h5>
+                <ul>
+                  <li class="text-start"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16"> <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/> </svg> Free Parking  </li>
+                  <li class="text-start"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16"> <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/> </svg> Wi-fi  </li>
+                  <li class="text-start"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16"> <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/> </svg> Hot Tub  </li>
+                  <li class="text-start"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16"> <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/> </svg> Bar/Lounge  </li>
+                  <li class="text-start"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16"> <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/> </svg> Smoke-Free Rooms  </li>
+                  <li class="text-start"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16"> <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/> </svg> Restaurant  </li>
+                  <li class="text-start"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16"> <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/> </svg> Air conditioning  </li>
+                  <li class="text-start"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16"> <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/> </svg> Airport-Shuttle  </li>
+                  
+                </ul>
+                
+                
+                
+                
+                <h5> Reviews (22) </h5>
+                <div class="form-group pb-5">
+                <label for="formGroupExampleInput"> </label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your review ☆☆☆☆☆">
+                  
+                </div>
+                </form>
+                    <div class="row">
+                      <div class="col-md-4">
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" class="rounded-circle" height="50px" width="50px">
+                      <h5> Phyo Yati Zaw </h5>
+                      <p> ★★★★★ </p>
+                      <p> 👍 67 👎 25</p>
+                      </div>
+
+                      <div class="col-md-8">
+                        <p> I love the service, it was so good. I'm a hourglass btw. </p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" class="rounded-circle" height="50px" width="50px">
+                      <h5> Bhone Htet Naing(You) </h5>
+                      <p> ★★★☆☆ </p>
+                      <p> 👍 32 👎 33 </p>
+                      </div>
+
+                      <div class="col-md-8">
+                        <p> It was both good and bad at the same time, but I can't elaborate further. </p>
+                      </div>
+                    </div>
+                  
+        <div class="container mt-4">
+          <p> <a class="btn btn-dark" role="button" data-bs-toggle="collapse" href="#multicollapse1" aria-expanded="true" aria-controls="multicollapse1"> Show All </a> </p>
+          <div class="row">
+            <div class="col">
+                <div class="collapse multicollapse" id="multicollapse1">
+                    <div class="card card-body">
+                      <div class="row">
+                      <div class="col-md-4">
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" class="rounded-circle" height="50px" width="50px"> 
+                      <h5> Min Hein Khant </h5>
+                      <p> ★★★★★ </p>
+                      <p> 👍 50 👎 0 </p>
+                      </div>
+
+                      <div class="col-md-8">
+                        <p>  Really liked the vibe here as always.  </p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" class="rounded-circle" height="50px" width="50px">
+                      <h5> Myat Thiri Naing </h5>
+                      <p> ★★★★☆ </p>
+                      <p> 👍 42 👎 19 </p>
+                      </div>
+
+                      <div class="col-md-8">
+                        <p> Hi. </p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" class="rounded-circle" height="50px" width="50px">
+                      <h5> Saung Oo Hnin </h5>
+                      <p> ★★★★☆ </p>
+                      <p> 👍 21 👎 3 </p>
+                      </div>
+
+                      <div class="col-md-8">
+                        <p> Oh my gosh, this hotel was great!1!!11!1  </p>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+              </div>
+              </div>
+              </div>
+              </div>
+
+
+
+
+
+
+
+<section id="traveladvice" style="background-color: #ecdcef;" class="pt-5">
+  <h1 class="text-center"> Travel Advice </h1>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        
+      <div class="card text-center h-100">
+        <img src="https://i.pinimg.com/736x/5c/be/1c/5cbe1ccfd9748b753929618c4d95ccef.jpg" class="card-img-top" height="500px">
+        <div class="card-body">
+          <h3> Best time to Visit Nyaungshwe </h3>
+          <p> The dry season (November to February) is ideal, with clear skies and mild temperatures, perfect for boat tours and photography. The rainy season (June to October) can make trails slippery and water levels high, while the hot season (March to May) is warmer and sunnier but can feel intense on the lake. Early mornings and late afternoons are also the best times to avoid crowds and capture the calm waters in photos. </p>
+          
+        </div>
+      </div>
+    
+      </div>
+
+       <div class="col-md-6">
+        
+      <div class="card text-center h-100">
+        <img src="https://i.pinimg.com/1200x/96/1e/75/961e756a616f0c37c39a840c710e114e.jpg" class="card-img-top" height="500px">
+        <div class="card-body">
+          <h3> Cultural Ettiquette </h3>
+          <p> Inle Lake is home to the Intha people and several other ethnic communities. Respect local customs by dressing modestly, especially when visiting temples, monasteries, or village homes. Always ask permission before photographing locals, particularly in villages or during traditional activities. Participating in cultural workshops, such as weaving or cooking classes, is a great way to engage respectfully. </p>
+          
+        </div>
+      </div>
+    
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="Account">
+        <div class="modal-dialog modal-lg modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> My Account </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                  <div class="row align-items-center justify-content-center">
+
+                <div class="col-md-4 mb-3 text-center">
+                    <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg"
+                         class="img-fluid rounded-circle mb-2"
+                         alt="Profile Picture">
+                    <br>
+                    <button class="btn btn-outline-dark btn-lg">
+                        Change Image
+                    </button>
+                </div>
+
+                <div class="col-md-6 text-md-start text-center pb-5">
+                    <h4>Name: Bhone Htet Naing </h4>
+                    <p class="mb-0">Email: bhone.h.naing@gmail.com </p>
+                </div>
+
+            </div>
+            <div class="mt-4 text-start rounded p-3" style="background-color: white;">
+                <h5>Bio</h5>
+                <p>
+                    I like turtles and all in between.
+                </p>
+            </div>
+            </div>
+            </div>
+          </div>
+          </div>
+
+
+
+
+
+
+
+
+<footer class="bg-dark text-light pt-4 pb-3">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 mb-3 mt-5">
+        <a href="Privacy_Policy.html" style="text-decoration: none; color: white;"> <h5>Privacy Policy</h5> </a>
+      </div>
+
+      <div class="col-md-3 mb-3 mt-5">
+        <a href="Terms_Agreements.html" style="text-decoration: none; color: white;"><h5>Terms and Agreement</h5> </a>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="../Index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="Cuisines.html" class="text-light text-decoration-none"> Cuisines </a></li>
+          <li><a href="Culture.html" class="text-light text-decoration-none"> Culture & Traditions </a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5> Contact Us </h5>
+        <img src="Facebook.png" height="50px" width="50px" alt="Facebook">
+        <img src="Twitter.png" height="50px" width="50px" alt="Twitter/X">
+        <img src="Viber.png" height="50px" width="50px" alt="Viber">
+    </div>
+
+    <hr class="border-light">
+
+    <div class="text-center">
+      <small>© EDUSN.WE'ER (2026). All Rights Reserved </small>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

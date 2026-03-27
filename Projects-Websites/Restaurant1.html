@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Travel Guide Website </title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+      nav{
+        background: url("https://i.pinimg.com/1200x/c8/6a/b3/c86ab320eb7dd9bb4c052463d3642166.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #travel{
+        background: url("https://i.pinimg.com/736x/4d/99/63/4d996309561f99791b2a644f01cf97a9.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      
+      .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+      }
+
+
+      .pagination a.active {
+        background-color: rgb(212, 160, 222);
+        color: white;
+      }
+
+
+      .pagination a:hover:not(.active) {background-color: #d295dc;}
+
+      .pagination a{
+        border: 1px solid rgb(172, 113, 179);
+        background-color: rgb(255, 251, 255);
+      }
+
+      .card{transition: transform 0.2s ease, background-color 0.2s ease;}
+
+      .card:hover{
+        transform: scale(1.05);
+      }
+      
+      #Food{
+        background: url("https://i.pinimg.com/1200x/7b/41/b1/7b41b1d16ceccb8f9118291125023ed4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+      }
+      
+
+
+
+    </style>
+
+</head>
+<body style="background-color: rgb(246, 233, 246);">
+<nav id="navbar" class="navbar navbar-expand-lg" style="background-color: rgb(206, 130, 206);">
+    <div class="container">
+        <a class="navbar-brand" href="About_Us.html"> <img src="../Books/Image/Logo.png" alt="Logo-WE'ER" height="50px" width="110px"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span> </button>
+            
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="../Index.html"> Home</a>
+            </li>
+            
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="" role="button" data-bs-toggle="dropdown"> Places to Visit </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="Taunggyi.html"> Taunggyi </a></li>
+                    <li><a class="dropdown-item" href="Kalaw.html"> Kalaw </a></li>
+                    <li><a class="dropdown-item" href="Nyaungshwe.html"> Nyaungshwe </a></li>
+                    <li><a class="dropdown-item" href="Pindaya.html"> Pindaya </a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Cuisines.html"> Cuisines </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Culture.html"> Culture & Traditions  </a>
+            </li>
+        </ul>
+
+        <form class="d-flex me-3">
+            <input class="form-control me-2" type="search" placeholder="Type here to Search">
+                <button class="btn btn-outline-light" type="button"> Search</button>
+        </form>
+
+        <div class="ms-auto">
+          <button type="button" class="btn btn-light ms-3" data-bs-toggle="modal" data-bs-target="#myModal"> Sign Up </button>
+          <button type="button" class="btn btn-light ms-3" data-bs-toggle="modal" data-bs-target="#myModal1"> Log in </button>
+          <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg" class="rounded-circle ms-4" data-bs-toggle="modal" data-bs-target="#Account" height="50px" width="50px"> </a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-md modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Sign Up </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label"> Username </label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Email Address </label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+
+                        <div >
+                            <label for="password" class="form-label"> Password </label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="pt-2">
+                        <input type="checkbox" id="agree1">
+                        <label for="agree1"> I agree to the <a href="Terms_Agreements.html"> Terms and Agreements </a></label><br>
+                        <input type="checkbox" id="agree2">
+                        <label for="agree2"> I agree to the <a href="Privacy_Policy.html">Privacy Policy </a></label><br>
+                        <p class="text-end pt-5" style="font-size: 15px;">Already have an account? <a href="myModal1" data-bs-toggle="modal" data-bs-target="#myModal1" data-bs-dismiss="modal"> Log in </a></p>
+                        </div>
+
+                    </form>
+                </div>
+ 
+                <div class="modal-footer justify-content-center p-4">
+                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal" style="background-color: rgb(226, 158, 226);"> Confirm </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog modal-md modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Login </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Email Address </label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+
+                        <div >
+                            <label for="password" class="form-label"> Password </label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="pt-2">
+                        <input type="checkbox" id="agree1">
+                        <label for="agree1"> I agree to the <a href="Terms_Agreements.html"> Terms and Agreements </a></label><br>
+                        <input type="checkbox" id="agree2">
+                        <label for="agree2"> I agree to the <a href="Privacy_Policy.html">Privacy Policy </a></label><br>
+                        <p class="text-end pt-5" style="font-size: 15px;"> <a href="$"> Forgot Password? </a></p>
+                        </div>
+
+                    </form>
+                </div>
+ 
+                <div class="modal-footer justify-content-center p-4">
+                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal" style="background-color: rgb(226, 158, 226);"> Confirm </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section id="Food">
+    <div class="container">
+<div class="row justify-content-center mb-4">
+            <h1 class="text-center mt-5 text-light"> Restaurants in Shan State </h1>
+            <div class="col-md-6 mt-2">
+                <input class="form-control form-control-lg" type="search" placeholder="Search for cuisines and restaurants...">
+            </div>
+        </div>
+
+        <div class="container">
+
+
+  <div class="text-center mb-4">
+  <a href="Cuisines.html" class="btn btn-outline-dark  me-2">
+    Cuisine
+  </a>
+
+  <a href="Restaurant.html" class="btn btn-dark me-2">
+    Restaurant
+  </a>
+</div>
+</div>
+</section>
+
+ <div class="container pb-5">
+      
+
+    <h3 class="mb-4 pt-5 text-center"> Must Try Restaurants </h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#restaurant">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/63/9d/75/inle-heritage-restaurant.jpg?h=500&s=1&w=900" class="card-img-top" height="420px">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"> Inle Heritage House Restaurant</h5>
+                        <p> Combines dining with cultural preservation, serving traditional recipes using fresh local ingredients. </p>
+                        <p> ★★★★☆ (34) </p>
+            <button type="btn" class="btn btn-dark "> Learn More </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/3c/53/77/photo0jpg.jpg" class="card-img-top" height="420px">
+                    <div class="card-body text-center" data-bs-toggle="modal" data-bs-target="#restaurants">
+                        <h5 class="card-title"> The Shan Restaurant </h5>
+                        <p> A luxurious restaurant with authentic Shan cuisine mixed with western delights. </p>
+                        <p> ★★★★★ (41) </p>
+            <button type="btn" class="btn btn-dark "> Learn More </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/28/bd/29/the-shan-noodle-food.jpg?h=500&s=1&w=900" class="card-img-top" height="420px">
+                    <div class="card-body text-center" data-bs-toggle="modal" data-bs-target="#restaurant">
+                        <h5 class="card-title"> The Shan Noodle & Food House </h5>
+                        <p> A top spot to try authentic Shan noodles and local breakfast dishes. Great for a simple, local experience. </p>
+                        <p> ★★★★☆ (29) </p>
+            <button type="btn" class="btn btn-dark "> Learn More </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5 bg-light">
+    <div class="container">
+    <h2 class="text-center mb-4"> All Shan Restaurants </h2>
+
+  <div class="text-center mb-4">
+
+    <a href="Cuisines.html" class="btn btn-dark  me-2">
+    All
+  </a>
+
+  <a href="Cuisines.html" class="btn btn-outline-dark  me-2">
+    Inle
+  </a>
+
+  <a href="Restaurant.html" class="btn btn-outline-dark me-2">
+    Taunggyi
+  </a>
+
+  <a href="Cuisines.html" class="btn btn-outline-dark  me-2">
+    Nyaungshwe
+  </a>
+
+  <a href="Restaurant.html" class="btn btn-outline-dark me-2">
+    Pindaya
+  </a>
+
+  
+</div>
+
+
+    <div class="row g-4 pb-3">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://media-cdn.tripadvisor.com/media/photo-s/18/db/85/af/front-view.jpg" class="card-img-top" height="420px" >
+          <div class="card-body text-center" data-bs-toggle="modal" data-bs-target="#restaurant1">
+            <h5 class="card-title text-center"> Live Dim Sum Restaurant </h5>
+            <p> A restaurant that sells both dim sums and traditional shan cuisines. </p>
+            <p> ★★★★☆ (11) </p>
+            <button type="btn" class="btn btn-dark "> Learn More </button>
+            
+          </div>
+        </div>
+        </div>
+      
+
+    
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/13/1b/71/photo1jpg.jpg" class="card-img-top" height="420px" >
+          <div class="card-body text-center" data-bs-toggle="modal" data-bs-target="#restaurant1">
+            <h5 class="card-title text-center"> The AB (T)ea (P)ot</h5>
+            <p> A simple individual making tea for a living. </p>
+            <p> ★★★☆☆ (31) </p>
+            <button type="btn" class="btn btn-dark "> Learn More </button>
+          </div>
+        </div>
+        </div>
+      
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/36/42/b7/the-view-from-the-rooftop.jpg" class="card-img-top" height="420px" >
+          <div class="card-body text-center" data-bs-toggle="modal" data-bs-target="#restaurant1">
+            <h5 class="card-title text-center"> Mann Mann Rooftop Cafe & Restaurant</h5>
+            <p> Our signature is Spain coffee, CATUNAMBU, and Myanmar Coffee. We have beer, wine, whisky, cocktail and mocktail. You can also enjoy Myanmar, Shan, Italian and some local snacks. </p>
+            <p> ★★★☆☆ (25) </p>
+            <button type="btn" class="btn btn-dark "> Learn More </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://media-cdn.tripadvisor.com/media/photo-s/19/e8/c8/27/moonlight-bistro.jpg" class="card-img-top" height="420px">
+          <div class="card-body text-center" data-bs-toggle="modal" data-bs-target="#restaurant1">
+            <h5 class="card-title text-center"> Moonlight Bistro </h5>
+            <p> A peaceful bar with a good selection of cocktails, cool, and fresh beer. </p>
+            <p> ★★★☆☆ (14) </p>
+            <button type="btn" class="btn btn-dark "> Learn More </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://th.bing.com/th?id=OLC.48mcU94OH5+KUg480x360&w=2000&h=1333&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" height="420px" >
+          <div class="card-body text-center" data-bs-toggle="modal" data-bs-target="#restaurant1">
+            <h5 class="card-title text-center"> M-Society Restaurant & Bar </h5>
+            <p> The Perfect Place to Meet.... The Real authentic Thai Restaurant in Nyaung Shwe - Inle City. </p>
+            <p> ★★★★★ (32) </p>
+            <button type="btn" class="btn btn-dark "> Learn More </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/65/97/7d/some-pictures-of-coffeehouse.jpg" class="card-img-top" height="420px">
+          <div class="card-body text-center" data-bs-toggle="modal" data-bs-target="#restaurant1">
+            <h5 class="card-title text-center"> Coffee House by Pleasent Garden </h5>
+            <p> A restaurant that does not stop at coffee, but also with savoury dishes and traditional delicacies. </p>
+            <p> ★★★★☆ (19) </p>
+            <button type="btn" class="btn btn-dark "> Learn More </button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    
+
+    <div class="pagination justify-content-center p-5">
+    <a href="Restaurant1.html"> << </a>
+    <a href="Restaurant.html"> 1 </a>
+    <a class="active" href="Restaurant1.html"> 2 </a>
+    <a href="Restaurant.html"> >> </a>
+    
+  </div>
+
+    
+</section>
+
+
+
+
+  
+
+
+
+<div class="modal fade" id="restaurant">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"> Inle Heritage House Restaurant </h4>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                    
+                    
+                </div>
+
+                
+
+                <div class="modal-body text-center">
+                  <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/63/9d/75/inle-heritage-restaurant.jpg?h=500&s=1&w=900" class="card-img-top">
+                  <div class="row py-4">
+                    <div class="col-md-4"> 
+                      <img src="https://i.pinimg.com/736x/f4/48/e8/f448e879fc0540b3a33067b4d8de494c.jpg" height="50px" width="50px">
+                      <h6>Innpawkhon Village, Inle Lake </h6></div>
+                    <div class="col-md-4"> 
+                      <img src="https://i.pinimg.com/736x/ed/93/ce/ed93ce20de3af82e73a638939c5129af.jpg" height="50px" width="50px">
+                      <h6> ★★★★☆ 4/5 Stars </h6> </div>
+                    <div class="col-md-4"> 
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" height="50px" width="50px">
+                      <h6> 34 Reviews </h6> </div>
+                  </div>
+                <p> Inle Heritage House Restaurant is a not-for-profit dining and cultural venue located in Nampan, Innpawkhon Village on Inle Lake, Shan State, Myanmar. Operated by the Inle Heritage Foundation, it serves as both a restaurant and a center for environmental, cultural, and educational preservation around Inle Lake. </p>
+                <h5> Reviews (34) </h5>
+                <div class="form-group pb-5">
+                <label for="formGroupExampleInput"> </label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your review ☆☆☆☆☆">
+                  
+                </div>
+                </form>
+                    <div class="row">
+                      <div class="col-md-4">
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" class="rounded-circle" height="50px" width="50px">
+                      <h5> Phyo Yati Zaw </h5>
+                      <p> ★★★★★ </p>
+                      <p> 👍 67 👎 25</p>
+                      </div>
+
+                      <div class="col-md-8">
+                        <p> We came here during our boat tour and ended up staying longer than planned because it was just so relaxing. Inle Heritage House Restaurant is a great place to take a break from the heat and crowds. The set menu had a bit of everything, and all of it tasted really good. Not cheap, but a really nice experience overall. </p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" class="rounded-circle" height="50px" width="50px">
+                      <h5> Bhone Htet Naing(You) </h5>
+                      <p> ★★★☆☆ </p>
+                      <p> 👍 32 👎 33 </p>
+                      </div>
+
+                      <div class="col-md-8">
+                        <p> This place was such a nice surprise. Inle Heritage House Restaurant has a really calm, peaceful vibe right by the lake, and it feels way less touristy than other stops. </p>
+                      </div>
+                    </div>
+                  
+        <div class="container mt-4">
+          <p> <a class="btn btn-dark" role="button" data-bs-toggle="collapse" href="#multicollapse1" aria-expanded="true" aria-controls="multicollapse1"> Show All </a> </p>
+          <div class="row">
+            <div class="col">
+                <div class="collapse multicollapse" id="multicollapse1">
+                    <div class="card card-body">
+                      <div class="row">
+                      <div class="col-md-4">
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" class="rounded-circle" height="50px" width="50px"> 
+                      <h5> Min Hein Khant </h5>
+                      <p> ★★★★★ </p>
+                      <p> 👍 50 👎 0 </p>
+                      </div>
+
+                      <div class="col-md-8">
+                        <p>  Really liked the vibe here.  </p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" class="rounded-circle" height="50px" width="50px">
+                      <h5> Myat Thiri Naing </h5>
+                      <p> ★★★★☆ </p>
+                      <p> 👍 42 👎 19 </p>
+                      </div>
+
+                      <div class="col-md-8">
+                        <p> If this review gets to 50 likes, I'll do a mukbang. </p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                      <img src="https://i.pinimg.com/1200x/5e/39/6b/5e396bb1b17681759922dd10f8a9d702.jpg" class="rounded-circle" height="50px" width="50px">
+                      <h5> Saung Oo Hnin </h5>
+                      <p> ★★★★☆ </p>
+                      <p> 👍 21 👎 3 </p>
+                      </div>
+
+                      <div class="col-md-8">
+                        <p> Probably one of the most relaxing meals we had on the trip. Inle Heritage House Restaurant has that perfect mix of good food, nice views, and a laid-back atmosphere. It’s not the cheapest option, but it’s definitely memorable and worth checking out at least once.  </p>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+              </div>
+              </div>
+              </div>
+              </div>
+  
+            </div>
+            
+
+            <div class="modal fade" id="Account">
+        <div class="modal-dialog modal-lg modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> My Account </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                  <div class="row align-items-center justify-content-center">
+
+                <div class="col-md-4 mb-3 text-center">
+                    <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg"
+                         class="img-fluid rounded-circle mb-2"
+                         alt="Profile Picture">
+                    <br>
+                    <button class="btn btn-outline-dark btn-lg">
+                        Change Image
+                    </button>
+                </div>
+
+                <div class="col-md-6 text-md-start text-center pb-5">
+                    <h4>Name: Bhone Htet Naing </h4>
+                    <p class="mb-0">Email: bhone.h.naing@gmail.com </p>
+                </div>
+
+            </div>
+            <div class="mt-4 text-start rounded p-3" style="background-color: white;">
+                <h5>Bio</h5>
+                <p>
+                    I like turtles and all in between.
+                </p>
+            </div>
+            </div>
+            </div>
+          </div>
+          </div>
+    
+
+
+
+
+
+<footer class="bg-dark text-light pt-4 pb-3">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 mb-3 mt-5">
+        <a href="Privacy_Policy.html" style="text-decoration: none; color: white;"> <h5>Privacy Policy</h5> </a>
+      </div>
+
+      <div class="col-md-3 mb-3 mt-5">
+        <a href="Terms_Agreements.html" style="text-decoration: none; color: white;"><h5>Terms and Agreement</h5> </a>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="../Index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="Cuisines.html" class="text-light text-decoration-none"> Cuisines </a></li>
+          <li><a href="Culture.html" class="text-light text-decoration-none"> Culture & Traditions </a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5> Contact Us </h5>
+        <img src="Facebook.png" height="50px" width="50px" alt="Facebook">
+        <img src="Twitter.png" height="50px" width="50px" alt="Twitter/X">
+        <img src="Viber.png" height="50px" width="50px" alt="Viber">
+    </div>
+
+    <hr class="border-light">
+
+    <div class="text-center">
+      <small>© EDUSN.WE'ER (2026). All Rights Reserved </small>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

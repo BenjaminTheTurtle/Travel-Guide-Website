@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Travel Guide Website </title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+
+      nav{
+        background: url("https://i.pinimg.com/1200x/c8/6a/b3/c86ab320eb7dd9bb4c052463d3642166.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #travel{
+        background: url("https://i.pinimg.com/736x/4d/99/63/4d996309561f99791b2a644f01cf97a9.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      
+      .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+      }
+
+
+      .pagination a.active {
+        background-color: rgb(212, 160, 222);
+        color: white;
+      }
+
+
+      .pagination a:hover:not(.active) {background-color: #d295dc;}
+
+      .pagination a{
+        border: 1px solid rgb(172, 113, 179);
+        background-color: rgb(255, 251, 255);
+      }
+
+      .card{transition: transform 0.2s ease, background-color 0.2s ease;}
+
+      .card:hover{
+        transform: scale(1.05);
+      }
+
+      #Food{
+        background: url("https://i.pinimg.com/1200x/7b/41/b1/7b41b1d16ceccb8f9118291125023ed4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+      }
+
+      
+
+
+
+    </style>
+
+</head>
+<body style="background-color: rgb(246, 233, 246);">
+<nav id="navbar" class="navbar navbar-expand-lg" style="background-color: rgb(206, 130, 206);">
+    <div class="container">
+        <a class="navbar-brand" href="About_Us.html"> <img src="../Books/Image/Logo.png" alt="Logo-WE'ER" height="50px" width="110px"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span> </button>
+            
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="../Index.html"> Home</a>
+            </li>
+            
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="" role="button" data-bs-toggle="dropdown"> Places to Visit </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="Taunggyi.html"> Taunggyi </a></li>
+                    <li><a class="dropdown-item" href="Kalaw.html"> Kalaw </a></li>
+                    <li><a class="dropdown-item" href="Nyaungshwe.html"> Nyaungshwe </a></li>
+                    <li><a class="dropdown-item" href="Pindaya.html"> Pindaya </a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Cuisines.html"> Cuisines </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Culture.html"> Culture & Traditions  </a>
+            </li>
+        </ul>
+
+        <form class="d-flex me-3">
+            <input class="form-control me-2" type="search" placeholder="Type here to Search">
+                <button class="btn btn-outline-light" type="button"> Search</button>
+        </form>
+
+       <div class="ms-auto">
+          <button type="button" class="btn btn-light ms-3" data-bs-toggle="modal" data-bs-target="#myModal"> Sign Up </button>
+          <button type="button" class="btn btn-light ms-3" data-bs-toggle="modal" data-bs-target="#myModal1"> Log in </button>
+          <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg" class="rounded-circle ms-4" data-bs-toggle="modal" data-bs-target="#Account" height="50px" width="50px"> </a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-md modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Sign Up </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label"> Username </label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Email Address </label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+
+                        <div >
+                            <label for="password" class="form-label"> Password </label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="pt-2">
+                        <input type="checkbox" id="agree1">
+                        <label for="agree1"> I agree to the <a href="Terms_Agreements.html"> Terms and Agreements </a></label><br>
+                        <input type="checkbox" id="agree2">
+                        <label for="agree2"> I agree to the <a href="Privacy_Policy.html">Privacy Policy </a></label><br>
+                        <p class="text-end pt-5" style="font-size: 15px;">Already have an account? <a href="myModal1" data-bs-toggle="modal" data-bs-target="#myModal1" data-bs-dismiss="modal"> Log in </a></p>
+                        </div>
+
+                    </form>
+                </div>
+ 
+                <div class="modal-footer justify-content-center p-4">
+                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal" style="background-color: rgb(226, 158, 226);"> Confirm </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog modal-md modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Login </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Email Address </label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+
+                        <div >
+                            <label for="password" class="form-label"> Password </label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="pt-2">
+                        <input type="checkbox" id="agree1">
+                        <label for="agree1"> I agree to the <a href="Terms_Agreements.html"> Terms and Agreements </a></label><br>
+                        <input type="checkbox" id="agree2">
+                        <label for="agree2"> I agree to the <a href="Privacy_Policy.html">Privacy Policy </a></label><br>
+                        <p class="text-end pt-5" style="font-size: 15px;"> <a href="$"> Forgot Password? </a></p>
+                        </div>
+
+                    </form>
+                </div>
+ 
+                <div class="modal-footer justify-content-center p-4">
+                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal" style="background-color: rgb(226, 158, 226);"> Confirm </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section id="Food">
+  <div class="container">
+<div class="row justify-content-center mb-4">
+            <h1 class="text-center mt-5 text-light"> Cuisines in Shan State </h1>
+            <div class="col-md-6 mt-2">
+                <input class="form-control form-control-lg" type="search" placeholder="Search for cuisines and restaurants...">
+            </div>
+        </div>
+
+        <div class="container">
+
+
+  <div class="text-center mb-4">
+  <a href="Cuisines.html" class="btn btn-dark  me-2">
+    Cuisine
+  </a>
+
+  <a href="Restaurant.html" class="btn btn-outline-dark me-2">
+    Restaurant
+  </a>
+</div>
+</div>
+</div>
+</section>
+ <div class="container pb-5">
+       
+
+    <h3 class="mb-4 pt-5 text-center"> Must Try Dishes </h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/10/3a/f7/103af76fa4c6dc4e8beeef6746709ced.jpg" class="card-img-top" height="420px">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"> Shan Noodles</h5>
+                        <p> A famous local dish made with rice noodles, usually served with chicken or pork and a light, tasty sauce. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/1200x/a2/e1/51/a2e1515d1965ee6290a8ca2c8c466901.jpg" class="card-img-top" height="420px">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"> Pickled Tea Leaf Salad </h5>
+                        <p> A popular dish across Myanmar with unique mix of sour, bitter, and salty flavors. Try the Shan Version too! </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/86/3b/6f/863b6fd0091538737b0d7c9f22b7c1c8.jpg" class="card-img-top" height="420px">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"> Shan Sticky Rice </h5>
+                        <p> Rice cooked with turmeric and served with chicken, fish, or pork. It comes with a side of fresh vegetables and a light soup. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5 bg-light">
+      <h2 class="text-center pb-4"> All Dishes </h2>
+    
+    <div class="container">
+    <div class="row g-4 pb-3">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/736x/ed/ac/a3/edaca31e736cbc1acdabcba555cb7639.jpg" class="card-img-top" height="420px" >
+          <div class="card-body">
+            <h5 class="card-title text-center"> Tofu Noodles </h5>
+            <p> Noodles made partly with Shan tofu. </p>
+          </div>
+        </div>
+        </div>
+      
+
+    
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/736x/49/5c/e9/495ce9c5bf5a6a4af6769e66271e6149.jpg" class="card-img-top" height="420px" >
+          <div class="card-body">
+            <h5 class="card-title text-center"> Shan Vermicelli Soup </h5>
+            <p> Thin rice vermicelli served in a delicate, lightly seasoned broth with herbs and sometimes minced meat. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/0c/b4/89/0cb489269377b4beb12ec8e23a85b25f.jpg" class="card-img-top" height="420px" >
+          <div class="card-body">
+            <h5 class="card-title text-center"> Fermented Bean Rice </h5>
+            <p> Rice mixed with fermented soybeans that give a strong, slightly tangy and umami-rich taste. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/0e/a5/75/0ea5753a725cb90c0c5be2b4557a09d1.jpg" class="card-img-top" height="420px">
+          <div class="card-body">
+            <h5 class="card-title text-center"> Shan Sour Soup </h5>
+            <p> A tangy soup made with vegetables and sometimes meat, balanced with natural sour ingredients. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/99/2d/fb/992dfb726e2b81aba09b4b9442b6ef79.jpg" class="card-img-top" height="420px" >
+          <div class="card-body">
+            <h5 class="card-title text-center"> Sesame Rice Cakes  </h5>
+            <p> Rice-based sweets coated with sesame seeds, offering a nutty taste. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/4b/78/57/4b7857c35885ce941ada15f2839685f1.jpg" class="card-img-top" height="420px">
+          <div class="card-body">
+            <h5 class="card-title text-center"> Clear Herb Soup </h5>
+            <p> A light broth filled with leafy greens and herbs, designed to be refreshing and easy to digest. </p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    </div>
+    
+
+    <div class="pagination justify-content-center p-5">
+    <a href="Cuisines1.html"> << </a>
+    <a href="Cuisines.html"> 1 </a>
+    <a class="active" href="Cuisines1.html"> 2 </a>
+    <a href="Cuisines2.html"> 3 </a>
+    <a href="Cuisines.html"> >> </a>
+    
+  </div>
+
+    
+</section>
+
+
+
+<div class="modal fade" id="Account">
+        <div class="modal-dialog modal-lg modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> My Account </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                  <div class="row align-items-center justify-content-center">
+
+                <div class="col-md-4 mb-3 text-center">
+                    <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg"
+                         class="img-fluid rounded-circle mb-2"
+                         alt="Profile Picture">
+                    <br>
+                    <button class="btn btn-outline-dark btn-lg">
+                        Change Image
+                    </button>
+                </div>
+
+                <div class="col-md-6 text-md-start text-center pb-5">
+                    <h4>Name: Bhone Htet Naing </h4>
+                    <p class="mb-0">Email: bhone.h.naing@gmail.com </p>
+                </div>
+
+            </div>
+            <div class="mt-4 text-start rounded p-3" style="background-color: white;">
+                <h5>Bio</h5>
+                <p>
+                    I like turtles and all in between.
+                </p>
+            </div>
+            </div>
+            </div>
+          </div>
+          </div>
+  
+
+
+
+
+  
+    
+
+
+<footer class="bg-dark text-light pt-4 pb-3">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 mb-3 mt-5">
+        <a href="Privacy_Policy.html" style="text-decoration: none; color: white;"> <h5>Privacy Policy</h5> </a>
+      </div>
+
+      <div class="col-md-3 mb-3 mt-5">
+        <a href="Terms_Agreements.html" style="text-decoration: none; color: white;"><h5>Terms and Agreement</h5> </a>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="../Index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="Cuisines.html" class="text-light text-decoration-none"> Cuisines </a></li>
+          <li><a href="Culture.html" class="text-light text-decoration-none"> Culture & Traditions </a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5> Contact Us </h5>
+        <img src="Facebook.png" height="50px" width="50px" alt="Facebook">
+        <img src="Twitter.png" height="50px" width="50px" alt="Twitter/X">
+        <img src="Viber.png" height="50px" width="50px" alt="Viber">
+    </div>
+
+    <hr class="border-light">
+
+    <div class="text-center">
+      <small>© EDUSN.WE'ER (2026). All Rights Reserved </small>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
+

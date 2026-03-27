@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Travel Guide Website </title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+      nav{
+        background: url("https://i.pinimg.com/1200x/c8/6a/b3/c86ab320eb7dd9bb4c052463d3642166.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #travel{
+        background: url("https://i.pinimg.com/736x/4d/99/63/4d996309561f99791b2a644f01cf97a9.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      
+      .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+      }
+
+
+      .pagination a.active {
+        background-color: rgb(212, 160, 222);
+        color: white;
+      }
+
+
+      .pagination a:hover:not(.active) {background-color: #d295dc;}
+
+      .pagination a{
+        border: 1px solid rgb(172, 113, 179);
+        background-color: rgb(255, 251, 255);
+      }
+
+      .card{transition: transform 0.2s ease, background-color 0.2s ease;}
+
+      .card:hover{
+        transform: scale(1.05);
+      }
+
+      #Culture{
+        background: url("https://i.pinimg.com/1200x/20/03/c9/2003c97c5379d233f9d8e17042fcd7a9.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 250px;
+      }
+
+      
+
+
+
+    </style>
+
+</head>
+<body style="background-color: rgb(246, 233, 246);">
+<nav id="navbar" class="navbar navbar-expand-lg" style="background-color: rgb(206, 130, 206);">
+    <div class="container">
+        <a class="navbar-brand" href="About_Us.html"> <img src="../Books/Image/Logo.png" alt="Logo-WE'ER" height="50px" width="110px"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span> </button>
+            
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="../Index.html"> Home</a>
+            </li>
+            
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="" role="button" data-bs-toggle="dropdown"> Places to Visit </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="Taunggyi.html"> Taunggyi </a></li>
+                    <li><a class="dropdown-item" href="Kalaw.html"> Kalaw </a></li>
+                    <li><a class="dropdown-item" href="Nyaungshwe.html"> Nyaungshwe </a></li>
+                    <li><a class="dropdown-item" href="Pindaya.html"> Pindaya </a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Cuisines.html"> Cuisines </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Culture.html"> Culture & Traditions  </a>
+            </li>
+        </ul>
+
+        <form class="d-flex me-3">
+            <input class="form-control me-2" type="search" placeholder="Type here to Search">
+                <button class="btn btn-outline-light" type="button"> Search</button>
+        </form>
+
+       <div class="ms-auto">
+          <button type="button" class="btn btn-light ms-3" data-bs-toggle="modal" data-bs-target="#myModal"> Sign Up </button>
+          <button type="button" class="btn btn-light ms-3" data-bs-toggle="modal" data-bs-target="#myModal1"> Log in </button>
+          <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg" class="rounded-circle ms-4" data-bs-toggle="modal" data-bs-target="#Account" height="50px" width="50px"> </a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-md modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Sign Up </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label"> Username </label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Email Address </label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+
+                        <div >
+                            <label for="password" class="form-label"> Password </label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="pt-2">
+                        <input type="checkbox" id="agree1">
+                        <label for="agree1"> I agree to the <a href="Terms_Agreements.html"> Terms and Agreements </a></label><br>
+                        <input type="checkbox" id="agree2">
+                        <label for="agree2"> I agree to the <a href="Privacy_Policy.html">Privacy Policy </a></label><br>
+                        <p class="text-end pt-5" style="font-size: 15px;">Already have an account? <a href="myModal1" data-bs-toggle="modal" data-bs-target="#myModal1" data-bs-dismiss="modal"> Log in </a></p>
+                        </div>
+
+                    </form>
+                </div>
+ 
+                <div class="modal-footer justify-content-center p-4">
+                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal" style="background-color: rgb(226, 158, 226);"> Confirm </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog modal-md modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Login </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Email Address </label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+
+                        <div >
+                            <label for="password" class="form-label"> Password </label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="pt-2">
+                        <input type="checkbox" id="agree1">
+                        <label for="agree1"> I agree to the <a href="Terms_Agreements.html"> Terms and Agreements </a></label><br>
+                        <input type="checkbox" id="agree2">
+                        <label for="agree2"> I agree to the <a href="Privacy_Policy.html">Privacy Policy </a></label><br>
+                        <p class="text-end pt-5" style="font-size: 15px;"> <a href="$"> Forgot Password? </a></p>
+                        </div>
+
+                    </form>
+                </div>
+ 
+                <div class="modal-footer justify-content-center p-4">
+                    <button type="button" class="btn btn-lg" data-bs-dismiss="modal" style="background-color: rgb(226, 158, 226);"> Confirm </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section id="Culture" class="py-5 pt-5 text-center text-light">
+    <h2> Culture & Traditions of Shan State </h2>
+</section>
+<div class="container pt-4">
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card h-100">
+                <img src="https://i.pinimg.com/736x/fe/ba/21/feba21940e6c20e391553d7627cc6bc1.jpg" class="card-img-top" height="350px">
+                <div class="card-body text-center">
+                <h4> Ethnic Diversity </h4>
+                <p> Shan State is one of the most culturally diverse regions in Myanmar. While the Shan people are the largest group, the state is also home to Pa-O, Intha, Palaung, Danu, and many other ethnic communities. Each group has its own language, clothing, and customs, which creates a rich cultural mix that travelers can experience in villages, markets, and festivals.</p>
+                </div>
+        </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100">
+                <img src="https://i.pinimg.com/1200x/c8/73/0b/c8730bc599ee89c38821d195124e08a4.jpg" class="card-img-top" height="350px">
+                <div class="card-body text-center">
+                <h4> Traditional Attire </h4>
+                <p> Traditional clothing is still widely worn, especially in rural areas. Shan women often wear long, elegant skirts and fitted jackets, while men wear loose trousers and traditional headgear. The Pa-O people are especially recognizable by their dark clothing and brightly colored turbans. These outfits are not just for show, they are also apart of everyday life and reflect identity and heritage. </p>
+                </div>
+        </div>
+        </div>
+
+        <div class="col-md-6 pt-5">
+            <div class="card h-100">
+                <img src="https://i.pinimg.com/1200x/4b/33/47/4b3347caca59aa6fc984d24c1fdd1913.jpg" class="card-img-top" height="350px">
+                <div class="card-body text-center">
+                <h4> Food Culture </h4>
+                <p> Food in Shan State is simple, fresh, and deeply connected to local agriculture. Popular dishes include Shan noodles, rice with various side dishes, and fermented tea leaf salad. Around Inle Lake, meals often feature fresh fish and vegetables grown on floating gardens. Dining is usually communal, and meals are an important part of social life.</p>
+                </div>
+        </div>
+        </div>
+
+        <div class="col-md-6 pt-5">
+            <div class="card h-100">
+                <img src="https://i.pinimg.com/1200x/91/e8/c1/91e8c181eeed97ef45aa563985bc88cc.jpg" class="card-img-top" height="350px">
+                <div class="card-body text-center">
+                <h4> Religion </h4>
+                <p> Buddhism is central to life in Shan State, and you’ll find monasteries and pagodas in almost every town and village. Daily routines often include offering food to monks and visiting temples. Travelers should dress modestly and remove shoes when entering religious sites as a sign of respect. </p>
+                </div>
+        </div>
+        </div>
+
+        <div class="col-md-6 pt-5 pb-4">
+            <div class="card h-100">
+                <img src="https://i.pinimg.com/1200x/08/dd/7b/08dd7b49da14a2e4d33312d57f146e68.jpg" class="card-img-top" height="350px">
+                <div class="card-body text-center">
+                <h4> Village Life </h4>
+                <p> In many parts of Shan State, traditional lifestyles are still preserved. Around Inle Lake, the Intha people are known for their leg-rowing fishing technique, a unique method of balancing on one leg while rowing with the other. Villages often specialize in crafts such as weaving, silverwork, and boat-making, giving visitors a glimpse into local livelihoods. </p>
+                </div>
+        </div>
+        </div>
+
+        <div class="col-md-6 pt-5 pb-4">
+            <div class="card h-100">
+                <img src="https://i.pinimg.com/1200x/a0/ff/22/a0ff22a71581e071f744a2ec78cfc953.jpg" class="card-img-top" height="350px">
+                <div class="card-body text-center">
+                <h4> Ettiquette </h4>
+                <p> Respect and politeness are highly valued. It’s customary to: </p>
+                    <ul>
+                        <li> Remove shoes before entering homes and temples </li>
+                        <li> Dress modestly, especially in rural areas </li>
+                        <li> Ask permission before taking photos of people </li>
+                        <li> Greet others with a smile and gentle manner </li>
+                    </ul>
+                <p> Small gestures of respect go a long way in creating meaningful interactions with locals. </p>
+                </div>
+        </div>
+        </div>
+
+       
+    </div>
+</div>
+
+<section class="py-5" style="background-color: #edddef;">
+    <h2 class="text-center pb-5"> Popular Festivals </h2>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <img src="https://i.pinimg.com/736x/7a/03/46/7a034642f27964f1c69fbffbf9ebe08f.jpg" height="400px" class="rounded">
+                    <div class="card-body">
+                    <h4> Taunggyi Balloon Festival </h4>
+                    <p> One of the most famous events in Myanmar, this festival is held in Taunggyi around November during the Tazaungdaing season. Giant, colorful hot-air balloons are released into the sky with some being during the day, while others are lit up at night with fireworks. The atmosphere is lively, with music, street food, and large crowds, making it a must-see cultural spectacle. </p>
+                    <button  style="text-decoration: underline; border: none; background-color: white;" data-bs-toggle="modal" data-bs-target="#Info"> Learn More </button>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <img src="https://i.pinimg.com/1200x/40/b4/bc/40b4bcb2d7d9ecd8a4ba19fd64afbaa9.jpg" height="400px" class="rounded">
+                    <div class="card-body">
+                    <h4> Phaung Daw Oo Festival </h4>
+                    <p> Celebrated at Inle Lake, this festival features a unique boat procession carrying sacred Buddha images around the lake. Leg-rowing Intha fishermen guide the boats, and villages along the lake host ceremonies and celebrations. It’s a beautiful mix of religion, tradition, and community spirit. </p>
+                    <button  style="text-decoration: underline; border: none; background-color: white;" data-bs-toggle="modal" data-bs-target="#Info"> Learn More </button>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <img src="https://i.pinimg.com/1200x/6b/ec/52/6bec52a1b06f213e7d870ddeb90e744d.jpg" height="400px" class="rounded">
+                    <div class="card-body">
+                    <h4> Tazaungdaing Festival </h4>
+                    <p> Also known as the Festival of Lights, Tazaungdaing is celebrated across Shan State with candle lighting, offerings, and nighttime festivities. It often overlaps with the Taunggyi Balloon Festival, creating a vibrant and festive atmosphere throughout the region. </p>
+                    <button  style="text-decoration: underline; border: none; background-color: white;" data-bs-toggle="modal" data-bs-target="#Info"> Learn More </button>
+                </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <h2 class="text-center pb-5"> Traditional Arts & Craft </h2>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <img src="https://i.pinimg.com/736x/68/b3/1e/68b31ebeb1ee5e7c91ca8e90b7e639fc.jpg" height="500px" class="rounded">
+                    <div class="card-body">
+                    <h4> Weaving & Textiles  </h4>
+                    <p> Shan State is well known for its handwoven fabrics, especially around Inle Lake. Local artisans produce beautiful silk and cotton textiles using traditional looms. Each ethnic group has its own patterns and colors, often reflecting identity and heritage. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <img src="https://i.pinimg.com/736x/5b/00/53/5b005318a9e8b260996b4da8fbea512a.jpg" height="500px" class="rounded">
+                    <div class="card-body">
+                    <h4> Wood Carving </h4>
+                    <p> Intricate wood carving is a respected craft in Shan culture. You’ll see detailed designs in monasteries, furniture, and decorative items, often featuring religious symbols and nature-inspired patterns. </p>
+                  
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <img src="https://i.pinimg.com/1200x/ca/d1/c9/cad1c9fa96f56aae64755495dee7c8a8.jpg" height="500px" class="rounded">
+                    <div class="card-body">
+                    <h4> Traditional Performances </h4>
+                    <p> Cultural performances are an important part of festivals. Traditional Shan dance is graceful and slow-paced, usually accompanied by local instruments such as drums and gongs. Performances often tell stories of history, religion, or daily life. </p>
+                       
+                </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="Account">
+        <div class="modal-dialog modal-lg modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> My Account </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                  <div class="row align-items-center justify-content-center">
+
+                <div class="col-md-4 mb-3 text-center">
+                    <img src="https://i.pinimg.com/736x/74/49/14/744914a8def5bbcfe53ab20caeb0ea74.jpg"
+                         class="img-fluid rounded-circle mb-2"
+                         alt="Profile Picture">
+                    <br>
+                    <button class="btn btn-outline-dark btn-lg">
+                        Change Image
+                    </button>
+                </div>
+
+                <div class="col-md-6 text-md-start text-center pb-5">
+                    <h4>Name: Bhone Htet Naing </h4>
+                    <p class="mb-0">Email: bhone.h.naing@gmail.com </p>
+                </div>
+
+            </div>
+            <div class="mt-4 text-start rounded p-3" style="background-color: white;">
+                <h5>Bio</h5>
+                <p>
+                    I like turtles and all in between.
+                </p>
+            </div>
+            </div>
+            </div>
+          </div>
+          </div>
+
+
+
+
+          <div class="modal fade" id="Info">
+        <div class="modal-dialog modal-lg modal-dialogue-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Taunggyi Balloon Festival </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+ 
+            
+                <div class="modal-body">
+                    <img src="https://i.pinimg.com/736x/7a/03/46/7a034642f27964f1c69fbffbf9ebe08f.jpg" class="card-img-top" height="750px"> 
+                  <h2 class="pt-5"> Location </h2>
+                  <p> The Taunggyi Hot Air Balloon Festival is held every year in Taunggyi, the capital of Shan State, during the full moon of the Tazaungmon month, which usually falls in November, and the celebration typically lasts between three and seven days depending on the schedule. </p>
+                    
+                  <h2 class="pt-3"> Purpose </h2>
+                  <p> The festival originally began as a religious event where people released lights into the sky as offerings to honor the Buddha and to symbolically drive away evil spirits and bad luck, but over time it has grown into a major cultural celebration that combines spirituality, entertainment, and community pride. </p>
+                    
+                  <h2 class="pt-3"> Origins </h2>
+                  <p> The tradition started in the early 20th century, when locals began launching simple hot air balloons as part of Buddhist celebrations, and it gradually developed into a large organized competition with complex balloon designs and participation from many teams across the region.</p>
+                
+                  <h2 class="pt-3"> Types of Balloons </h2>
+                  <p class="pb-2"> There are two main types of balloons featured in the festival: one type decorated with candles or lanterns that create beautiful glowing patterns in the sky, and another type filled with fireworks that explode in colorful displays, making the nighttime launches especially exciting and intense.</p>
+                  <p> The balloons are carefully handcrafted using traditional materials such as Shan paper and bamboo frames, and they are decorated with detailed artwork, candles, or fireworks, often representing cultural symbols, animals, or religious themes.</p>
+
+                  <h2 class="pt-3"> Activities </h2>
+                  <p class="pb-2"> During the daytime, the festival focuses on creativity and fun, with balloons shaped like animals and characters being released, while at night the main events take place as large balloons carrying lights or fireworks are launched, lighting up the sky and drawing huge crowds.</p>
+                  <p> In addition to the balloon launches, the festival includes live music, traditional dances, food stalls, night markets, and religious activities like offering robes to monks, making it a lively and meaningful event for both locals and visitors. </p>
+                
+                  <h2 class="pt-3"> Cultural Importance </h2>
+                  <p> The festival is one of the most important cultural events in Myanmar, representing religious devotion, artistic creativity, and strong community cooperation, and it brings together people from different backgrounds to celebrate a shared tradition.</p>
+                
+                
+                </div>
+
+            </div>
+          </div>
+          </div>
+<footer class="bg-dark text-light pt-4 pb-3">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 mb-3 mt-5">
+        <a href="Privacy_Policy.html" style="text-decoration: none; color: white;"> <h5>Privacy Policy</h5> </a>
+      </div>
+
+      <div class="col-md-3 mb-3 mt-5">
+        <a href="Terms_Agreements.html" style="text-decoration: none; color: white;"><h5>Terms and Agreement</h5> </a>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="../Index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="Cuisines.html" class="text-light text-decoration-none"> Cuisines </a></li>
+          <li><a href="Culture.html" class="text-light text-decoration-none"> Culture & Traditions </a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5> Contact Us </h5>
+        <img src="Facebook.png" height="50px" width="50px" alt="Facebook">
+        <img src="Twitter.png" height="50px" width="50px" alt="Twitter/X">
+        <img src="Viber.png" height="50px" width="50px" alt="Viber">
+    </div>
+
+    <hr class="border-light">
+
+    <div class="text-center">
+      <small>© EDUSN.WE'ER (2026). All Rights Reserved </small>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
